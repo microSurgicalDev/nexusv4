@@ -7,7 +7,6 @@ const morgan = require("morgan");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 const patientRoutes = require("./api/routes/newPatients");
 const appointmentRoutes = require("./api/routes/appointments");
@@ -43,5 +42,7 @@ if (process.env.NODE_ENV === "production") {
 // Routes which should handle requests
 app.use("/admin", patientRoutes);
 app.use("/patient", appointmentRoutes);
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));

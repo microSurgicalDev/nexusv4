@@ -9,7 +9,7 @@ class Patients extends Component {
 
   getPatients = () => {
     axios
-      .get("http://localhost:8080/admin/patients")
+      .get("http://localhost:5000/admin/patients")
       .then(response => {
         const data = response.data;
         console.log(data);
