@@ -22,7 +22,7 @@ router.get("/appointments", (req, res, next) => {
 });
 
 // ADD new appointment to DB
-router.post("/appointments", (req, res, next) => {
+router.post("/addAppointment", (req, res, next) => {
   const newAppointment = new Appointment({
     _id: new mongoose.Types.ObjectId(),
     firstName: req.body.firstName,

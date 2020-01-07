@@ -394,7 +394,7 @@ export default class AppointmentBuilder extends Component {
     };
 
     axios({
-      url: "http://localhost:8080/patient/appointments",
+      url: "http://localhost:8080/patient/addAppointment",
       method: "POST",
       data: confirmation
     })
@@ -411,27 +411,6 @@ export default class AppointmentBuilder extends Component {
   resize() {
     this.setState({ smallScreen: window.innerWidth < 768 });
   }
-
-  // componentDidMount() {
-  //   // Initialize the App Client
-  //   this.client = Stitch.initializeDefaultAppClient(
-  //     "appointmentscheduler-racyu"
-  //   );
-
-  //   Stitch.defaultAppClient.auth
-  //     .loginWithCredential(new AnonymousCredential())
-  //     .then(user => {
-  //       console.log(`Logged in as anonymous user with id: ${user.id}`);
-  //     })
-  //     .catch(console.error);
-  //   // Get a MongoDB Service Client, used for logging in and communicating with Stitch
-  //   const mongodb = this.client.getServiceClient(
-  //     RemoteMongoClient.factory,
-  //     "mongodb-atlas"
-  //   );
-  //   // Get a reference to the new appointments database
-  //   this.db = mongodb.db("appointments");
-  // }
 
   render() {
     const {
