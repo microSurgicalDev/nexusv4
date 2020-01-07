@@ -33,7 +33,7 @@ class AddPatient extends Component {
     };
 
     axios({
-      url: "http://localhost:8080/admin/addPatients",
+      url: "http://localhost:5000/admin/addPatients",
       method: "POST",
       data: payload
     })

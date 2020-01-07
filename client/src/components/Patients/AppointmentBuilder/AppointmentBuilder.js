@@ -394,7 +394,7 @@ export default class AppointmentBuilder extends Component {
     };
 
     axios({
-      url: "http://localhost:8080/patient/addAppointment",
+      url: "http://localhost:5000/patient/addAppointment",
       method: "POST",
       data: confirmation
     })
