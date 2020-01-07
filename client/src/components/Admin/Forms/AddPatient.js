@@ -32,30 +32,30 @@ class AddPatient extends Component {
       phoneNumber: this.state.phoneNumber
     };
 
-    //   axios
-    //     .post("/admin/addPatients")
-    //     .then(() => {
-    //       console.log("Data has been sent to the server");
-    //       this.resetUserInputs();
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // };
-
-    axios({
-      url: "http://localhost:5000/admin/addPatients",
-      method: "POST",
-      data: payload
-    })
-      .then(() => {
-        console.log("Data has been sent to the server");
+    axios
+      .post("/admin/addPatients")
+      .then(response => {
+        console.log("Data has been sent to the server" + response);
         this.resetUserInputs();
       })
       .catch(err => {
-        console.log(err);
+        console.log(err.response);
       });
   };
+
+  //   axios({
+  //     url: "http://localhost:5000/admin/addPatients",
+  //     method: "POST",
+  //     data: payload
+  //   })
+  //     .then(() => {
+  //       console.log("Data has been sent to the server");
+  //       this.resetUserInputs();
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
 
   render() {
     console.log("State: ", this.state);
